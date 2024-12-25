@@ -6,6 +6,6 @@ const router = Router();
 router.post('/sign-up', AuthControllers.createUser)
 router.post('/check-email', AuthControllers.checkIsEmailExist)
 router.post('/login', AuthControllers.loginUser)
-router.post('/logout', AuthControllers.logoutUser)
+router.put('/logout', AuthControllers.logoutUser)
 
 export const AuthRoutes = router

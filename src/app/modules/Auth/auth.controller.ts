@@ -27,7 +27,7 @@ const loginUser = catchAsync(async (req, res) => {
     data: result.restData,
   });
 });
-// login user
+// check user mail user
 const checkIsEmailExist = catchAsync(async (req, res) => {
   const { email } = req.body;
   const result = await AuthServices.isUserExistIntoDB(email);
@@ -38,7 +38,7 @@ const checkIsEmailExist = catchAsync(async (req, res) => {
     data: result,
   });
 });
-// login user
+// logout user
 const logoutUser = catchAsync(async (req, res) => {
   const { userId } = req.user;
   const result = await AuthServices.loginUser(userId);
