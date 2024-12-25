@@ -41,7 +41,7 @@ const checkIsEmailExist = catchAsync(async (req, res) => {
 // logout user
 const logoutUser = catchAsync(async (req, res) => {
   const { userId } = req.user;
-  const result = await AuthServices.loginUser(userId);
+  const result = await AuthServices.logoutUser(userId);
   sendResponse(res, {
     statusCode: httpStatus.OK,
     success: true,
